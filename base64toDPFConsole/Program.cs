@@ -24,8 +24,11 @@ namespace base64toPNGConsole
         public Decoder()
         {
             desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            sourceDir = "kurs5";
-            destinationDir = "gotowe2";
+
+            Console.WriteLine("Source directory name in desktop: ");
+            sourceDir = Console.ReadLine();
+            Console.WriteLine("Destination directory name in desktop: ");
+            destinationDir = Console.ReadLine();
 
             string[] files = Directory.GetFiles(Path.Combine(desktopPath, sourceDir), "*.html", SearchOption.TopDirectoryOnly);
 
